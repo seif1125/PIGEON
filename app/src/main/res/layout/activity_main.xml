@@ -1,82 +1,182 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#fff"
-    tools:context="com.example.deel.pigeon.MainActivity"
+    tools:context=".MainActivity"
+    android:background="#fff">
 
-    >
+
 
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="247dp"
-        android:layout_height="121dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:id="@+id/logo_iv"
+        android:layout_width="189dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="44dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo" />
+        app:srcCompat="@drawable/logo"
+        android:contentDescription="TODO" />
 
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="248dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        android:id="@+id/title_iv"
+        android:layout_width="189dp"
+        android:layout_height="49dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo_iv"
         app:srcCompat="@drawable/title"
-        tools:layout_editor_absoluteX="48dp" />
+        android:contentDescription="TODO" />
 
     <EditText
-        android:id="@+id/editText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:ems="10"
+        android:id="@+id/username_et"
+        android:layout_width="268dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="40dp"
+
+        android:hint="Please  Enter  Your Name"
         android:inputType="textPersonName"
-        android:text="Name"
-        app:layout_constraintEnd_toEndOf="@+id/imageView2"
-        app:layout_constraintStart_toStartOf="@+id/imageView2"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_iv" />
 
-    <EditText
-        android:id="@+id/editText2"
+    <Button
+        android:id="@+id/login_bt"
+        android:layout_width="176dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="240dp"
+        android:background="#ff0000"
+        android:fontFamily="monospace"
+        android:onClick="loginCheck"
+        android:text="Login"
+        android:textColor="#fff"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_iv" />
+
+    <TextView
+        android:id="@+id/altsign_tv"
+        android:layout_width="144dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="12dp"
+        android:text="Or Sign In With"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_bt" />
+
+    <ImageButton
+        android:id="@+id/googlelo_ib"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:background="#fff"
+        app:layout_constraintEnd_toEndOf="@+id/altsign_tv"
+        app:layout_constraintTop_toBottomOf="@+id/altsign_tv"
+        app:srcCompat="@drawable/googlelogo" />
+
+    <ImageButton
+        android:id="@+id/facelo_ib"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        app:layout_constraintStart_toStartOf="@+id/altsign_tv"
+        app:layout_constraintTop_toBottomOf="@+id/altsign_tv"
+        app:srcCompat="@drawable/facelogo" />
+
+    <TextView
+        android:id="@+id/forgotpass_tv"
+        android:layout_width="182dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="96dp"
+        android:text="Forgot Password"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_bt" />
+
+    <TextView
+        android:id="@+id/noacc_tv"
+        android:layout_width="176dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="4dp"
+        android:text="Have no Account !"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.259"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/forgotpass_tv" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="72dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="4dp"
+        android:text=" Sign Up"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.755"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/forgotpass_tv" />
+
+    <EditText
+        android:id="@+id/pass_et"
+        android:layout_width="270dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="44dp"
         android:ems="10"
+        android:hint="Please  Enter Password"
         android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="@+id/imageView2"
-        app:layout_constraintStart_toStartOf="@+id/imageView2"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/username_et"
+        android:autofillHints="" />
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="211dp"
-        android:layout_height="24dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginTop="8dp"
-        android:text="TextView"
-        app:layout_constraintEnd_toEndOf="@+id/editText"
-        app:layout_constraintStart_toStartOf="@+id/editText"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        android:id="@+id/errortext1_tv"
+        android:layout_width="260dp"
+        android:layout_height="30dp"
+        android:text=""
+        android:textColor="@color/colorPrimary"
+        android:textSize="16dp"
+        android:textStyle="bold"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.463"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/username_et" />
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="216dp"
-        android:layout_height="24dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginTop="8dp"
-        android:text="TextView"
-        app:layout_constraintEnd_toEndOf="@+id/editText2"
-        app:layout_constraintStart_toStartOf="@+id/editText2"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
-</android.support.constraint.ConstraintLayout>
+        android:id="@+id/errortext2_tv2"
+        android:layout_width="266dp"
+        android:layout_height="31dp"
+        android:text=""
+        android:textColor="@color/colorPrimary"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.468"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pass_et" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
