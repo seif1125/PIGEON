@@ -4,6 +4,228 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".signActivity">
+    tools:context=".signActivity"><![CDATA[
+
+
+    ;
+        android:text="Sign Up"
+        android:textColor="#fff"
+        android:textSize="20dp"
+        android:backgroundTint="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/asname_cb"/>
+
+
+
+
+
+
+
+
+    ]]>
+
+    <Button
+        android:id="@+id/signUp_bt"
+        android:layout_width="176dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="16dp"
+        android:background="#FF0000"
+        android:fontFamily="monospace"
+        android:onClick="signUp"
+        android:text="Sign UP"
+        android:textColor="#fff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/asname_cb" />
+
+    <EditText
+        android:id="@+id/username_et"
+        android:layout_width="270dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="80dp"
+        android:autofillHints=""
+        android:hint="Please  Enter Name"
+        android:inputType="text"
+        app:backgroundTint="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/erroruser_tv"
+        android:layout_width="270dp"
+        android:layout_height="29dp"
+        android:text=""
+        android:textColor="@color/colorPrimary"
+        android:textSize="16dp"
+        android:textStyle="bold"
+
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/username_et" />
+
+    <EditText
+        android:id="@+id/useremail_et"
+        android:layout_width="270dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="24dp"
+        android:autofillHints=""
+        android:hint="Please  Enter Email"
+        android:inputType="textEmailAddress"
+        app:backgroundTint="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/erroruser_tv" />
+
+    <TextView
+        android:id="@+id/erroremail_tv"
+        android:layout_width="270dp"
+        android:layout_height="29dp"
+        android:text=""
+        android:textColor="@color/colorPrimary"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/useremail_et" />
+
+    <EditText
+        android:id="@+id/userpassword_et"
+        android:layout_width="270dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="20dp"
+        android:autofillHints=""
+        android:hint="Please  Enter password"
+        android:inputType="textPassword"
+        app:backgroundTint="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/erroremail_tv" />
+
+    <TextView
+        android:id="@+id/errorpassword_tv"
+        android:layout_width="270dp"
+        android:layout_height="29dp"
+        android:text=""
+        android:textColor="@color/colorPrimary"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userpassword_et" />
+
+
+    <EditText
+        android:id="@+id/userconpass_et"
+        android:layout_width="270dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="20dp"
+        android:autofillHints=""
+        android:hint="Please Confirm password"
+        android:inputType="textPassword"
+        app:backgroundTint="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/errorpassword_tv" />
+
+    <TextView
+        android:id="@+id/errorconpass_tv"
+        android:layout_width="270dp"
+        android:layout_height="29dp"
+        android:text=""
+        android:textColor="@color/colorPrimary"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userconpass_et" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="149dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:text="Root Directory"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/errorconpass_tv" />
+
+    <CheckBox
+        android:id="@+id/asname_cb"
+        android:layout_width="176dp"
+        android:layout_height="45dp"
+        android:buttonTint="@color/colorPrimary"
+        android:checked="true"
+        android:onClick="toggleDirectory"
+
+        android:text="same as UserName"
+        app:layout_constraintEnd_toEndOf="@+id/userconpass_et"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/directory_et" />
+
+    <EditText
+        android:id="@+id/directory_et"
+        android:layout_width="177dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="20dp"
+        android:inputType="textPersonName"
+        android:text=""
+        android:textSize="25sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/userconpass_et"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/errorconpass_tv" />
+
+    <TextView
+        android:id="@+id/dir_tv"
+        android:layout_width="177dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical"
+        android:text=""
+        android:textColor="@color/colorAccent"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="@+id/userconpass_et"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/errorconpass_tv" />
+
+    <ProgressBar
+        android:id="@+id/progressBar_pb"
+        android:layout_width="25dp"
+        android:layout_height="39dp"
+        app:backgroundTint="@color/colorPrimary"
+        android:visibility="invisible"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signUp_bt" />
+
+    <TextView
+        android:id="@+id/progtext_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="14dp"
+        android:text="Registering your Account"
+        android:textSize="10sp"
+        android:visibility="invisible"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/progressBar_pb" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

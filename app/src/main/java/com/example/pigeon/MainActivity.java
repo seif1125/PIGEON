@@ -17,7 +17,7 @@ EditText usern,passw;
 TextView userer,passer;
 MediaPlayer mp,ep;
 private String name,pass;
-int c;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +41,7 @@ int c;
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                  passwordCorrect(getPassword(passw));
+                  passwordCorrect();
             }
 
             @Override
@@ -82,8 +82,8 @@ int c;
         return pet.getText().toString();
     }
 
-    private boolean passwordCorrect(String p){
-        if(p.isEmpty()){
+    private boolean passwordCorrect(){
+        if(passw.getText().toString().isEmpty()){
             showPasserror();
             return false;
         }
@@ -189,14 +189,14 @@ int c;
         pass=getPassword(passw);
 
         if (nameCorrect(name)){
-            if (passwordCorrect(pass)){
+            if (passwordCorrect()){
              if(credentialsCorrect()) {
                 finish();
             }
         }
         }
         else{
-            passwordCorrect(name);
+            passwordCorrect();
         }
 
 
@@ -207,5 +207,12 @@ int c;
 
 
     public void toggleSound(View view) {
+    }
+
+    public void goTosignUp(View view) {
+
+        Intent intent=new Intent(this,signActivity.class);
+        startActivity(intent);
+
     }
 }
